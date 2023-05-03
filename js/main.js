@@ -41,9 +41,10 @@ const showTime = () => {
         let fullTime = `${hours}:${minutes}:${seconds} ${AMPM}`;
 
         let currentDay = day[currentTimeDate.getDay()];
-        console.log(currentTimeDate.getDay());
+
         let currentDate  = currentTimeDate.getDate();
-        let currentMonth = currentTimeDate.getMonth();
+        let currentMonth = currentTimeDate.getMonth() + 1;
+        console.log(currentTimeDate.getMonth());
         let CurrentYear = currentTimeDate.getFullYear();
 
         let fullDate = `${currentDay} - ${currentDate}/${currentMonth}/${CurrentYear} - ${fullTime}`;
@@ -72,7 +73,7 @@ const getDataUser = () => {
     let todo = new Todo(newTag, "todo", addTime);
     //todo: Hiển thị consol.log
     todoList.addList(todo);
-    console.log(todoList.tagList);
+    // console.log(todoList.tagList);
 
 
     //! clear giá trị sau khi người dừng nhập vào và ấn add để tiếp tục nhập nội dung mới
